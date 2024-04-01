@@ -1,0 +1,144 @@
+openapi: 3.0.0
+info:
+  title: Event Interpreter API
+  description: Event Interpreter API for Sportium
+  version: 1.0.0
+paths:
+  /footballEvent:
+    get:
+      tags:
+        - Event
+      operationId: getFootballEvent
+      summary: Get Football Event
+      description: Get the football event object from the event text
+      parameters:
+        - name: event
+          in: query
+          description: Event text
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Valid response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FootballEvent'
+        default:
+          description: Default response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example:
+                      Error: Request not valid
+  /tennisEvent:
+    get:
+      tags:
+        - Event
+      operationId: getTennisEvent
+      summary: Get Tennis Event
+      description: Get the tennis event object from the event text
+      parameters:
+        - name: event
+          in: query
+          description: Event text
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Valid response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TennisEvent'
+        default:
+          description: Default response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example:
+                      Error: Request not valid
+  /americanFootballEvent:
+    get:
+      tags:
+        - Event
+      operationId: getAmericanFootballEvent
+      summary: Get American Football Event
+      description: Get the american football event object from the event text
+      parameters:
+        - name: event
+          in: query
+          description: Event text
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Valid response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AmericanFootballEvent'
+        default:
+          description: Default response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example:
+                      Error: Request not valid
+components:
+  schemas:
+    Event:
+      type: object
+      properties:
+        teamAName:
+          type: string
+        teamAScore:
+          type: string
+        teamBName:
+          type: string
+        teamBScore:
+          type: string
+
+    FootballEvent:
+      allOf:
+        - $ref: '#/components/schemas/Event'
+      type: object
+
+    TennisEvent:
+      allOf:
+        - $ref: '#/components/schemas/Event'
+      type: object
+      properties:
+        teamASets:
+          type: integer
+        teamAGames:
+          type: integer
+        teamBSets:
+          type: integer
+        teamBGames:
+          type: integer
+        isServing:
+          type: boolean
+
+    AmericanFootballEvent:
+      allOf:
+        - $ref: '#/components/schemas/Event'
+      type: object
+      properties:
+        period:
+          type: string
