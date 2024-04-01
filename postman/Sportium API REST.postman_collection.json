@@ -15,7 +15,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/footballEvent",
+					"raw": "http://localhost:8080/footballEvent?event=F.C. Barcelona 3-2 Real Madrid",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -27,8 +27,7 @@
 					"query": [
 						{
 							"key": "event",
-							"value": "F.C. Barcelona 3-2 Real Madrid",
-							"disabled": true
+							"value": "F.C. Barcelona 3-2 Real Madrid"
 						}
 					]
 				}
@@ -44,7 +43,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/tennisEvent",
+					"raw": "http://localhost:8080/tennisEvent?event=Anna Karolina Schmiedlova (1) 1 40-Adv 1 (0) *Varvara Lepchenko",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -56,8 +55,7 @@
 					"query": [
 						{
 							"key": "event",
-							"value": "Anna Karolina Schmiedlova (1) 1 40-Adv 1 (0) *Varvara Lepchenko",
-							"disabled": true
+							"value": "Anna Karolina Schmiedlova (1) 1 40-Adv 1 (0) *Varvara Lepchenko"
 						}
 					]
 				}

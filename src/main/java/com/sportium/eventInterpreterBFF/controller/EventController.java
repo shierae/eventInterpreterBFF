@@ -4,7 +4,7 @@ import com.sportium.eventInterpreterBFF.api.EventApi;
 import com.sportium.eventInterpreterBFF.model.AmericanFootballEvent;
 import com.sportium.eventInterpreterBFF.model.FootballEvent;
 import com.sportium.eventInterpreterBFF.model.TennisEvent;
-import com.sportium.eventInterpreterBFF.service.impl.EventServiceImpl;
+import com.sportium.eventInterpreterBFF.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class EventController implements EventApi {
 
     @Autowired
-    private EventServiceImpl eventService;
+    private EventService eventService;
 
     @Override
     public ResponseEntity<FootballEvent> getFootballEvent(String event) {

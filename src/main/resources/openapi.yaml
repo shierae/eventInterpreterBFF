@@ -113,16 +113,14 @@ components:
           type: string
         teamBScore:
           type: string
-
     FootballEvent:
+      type: object
       allOf:
         - $ref: '#/components/schemas/Event'
-      type: object
-
     TennisEvent:
+      type: object
       allOf:
         - $ref: '#/components/schemas/Event'
-      type: object
       properties:
         teamASets:
           type: integer
@@ -134,11 +132,10 @@ components:
           type: integer
         isServing:
           type: boolean
-
     AmericanFootballEvent:
+      type: object
       allOf:
         - $ref: '#/components/schemas/Event'
-      type: object
       properties:
         period:
           type: string
