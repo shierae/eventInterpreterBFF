@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "fdf0e5b6-e503-4bb3-bd02-36cb86e37c4a",
+		"name": "Sportium API REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32636253"
+	},
+	"item": [
+		{
+			"name": "Get Football object",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/footballEvent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"footballEvent"
+					],
+					"query": [
+						{
+							"key": "event",
+							"value": "F.C. Barcelona 3-2 Real Madrid",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tennis object",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tennisEvent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tennisEvent"
+					],
+					"query": [
+						{
+							"key": "event",
+							"value": "Anna Karolina Schmiedlova (1) 1 40-Adv 1 (0) *Varvara Lepchenko",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get American Football object",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/americanFootballEvent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"americanFootballEvent"
+					],
+					"query": [
+						{
+							"key": "event",
+							"value": "Pittsburgh Steelers 3-7 Minnesota Vikings 3rd Quarter",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
