@@ -71,7 +71,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/americanFootballEvent",
+					"raw": "http://localhost:8080/americanFootballEvent?event=Pittsburgh Steelers 3-7 Minnesota Vikings 3rd Quarter",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -83,8 +83,46 @@
 					"query": [
 						{
 							"key": "event",
-							"value": "Pittsburgh Steelers 3-7 Minnesota Vikings 3rd Quarter",
-							"disabled": true
+							"value": "Pittsburgh Steelers 3-7 Minnesota Vikings 3rd Quarter"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Football object- security",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "my-api-key",
+						"type": "text"
+					},
+					{
+						"key": "X-API-SECRET",
+						"value": "my-secret",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/footballEvent?event=F.C. Barcelona 3-2 Real Madrid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"footballEvent"
+					],
+					"query": [
+						{
+							"key": "event",
+							"value": "F.C. Barcelona 3-2 Real Madrid"
 						}
 					]
 				}
