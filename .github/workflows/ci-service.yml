@@ -3,7 +3,7 @@ name: Java CI with Maven
 on:
   workflow_dispatch:
     inputs:
-      environment:
+      skip_test:
         type: choice
         description: "Skip test"
         options:
@@ -17,3 +17,5 @@ on:
 jobs:
   maven:
     uses: shierae/shared-workflows/.github/workflows/java-backend.yml@main
+    with:
+      skip_test: ${{ inputs.skip_test }}
