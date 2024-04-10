@@ -2,16 +2,15 @@ name: Java CI with Maven
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_call:
     inputs:
       environment:
       description: 'Skip test'
       required: true
       options: [true, false]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   maven:
