@@ -4,9 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-      description: 'Skip test'
-      required: true
-      options: [true, false]
+        type: choice
+        description: "Skip test"
+        options:
+        - true
+        - false
   push:
     branches: [ "main" ]
   pull_request:
