@@ -5,7 +5,7 @@ on:
     inputs:
       skip_tests:
         type: choice
-        description: "Skip test"
+        description: "Skip tests"
         options:
         - true
         - false
