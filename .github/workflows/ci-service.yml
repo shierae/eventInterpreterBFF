@@ -8,4 +8,4 @@ on:
 
 jobs:
   maven:
-    uses: shared-workflows/.github/workflows/java-backend.yml@main
+    uses: shierae/shared-workflows/.github/workflows/java-backend.yml@main
